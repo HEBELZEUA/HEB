@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.animatedDiv {
+    text-align: center;
+	width: 75px;
+    height: 75px;
+    background-color:blue;
+    position: relative;
+    animation-name: driftacross;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+.fixedDiv {
+    position: absolute;
+	top: 150px;
+    left: 80px;
+    width: 400px;
+    height: 300px;
+    border: 4px solid #808080
+	}
+
+@keyframes driftacross {
+ 0%   {left:0px; top:0px;}
+  25%  {left:475px; top:0px;}
+  50%  {left:475px; top:375px;}
+  75%  {left:0px; top:375px;}
+  100% {left:0px; top:0px;}
+}
+</style>
+</head>
+<body>
+
+<H1>Animation example</H1>
+
+<div class="animatedDiv">animated box</div>
+<div class="fixedDiv">This box should have the animated box move around it</div>
+
+</body>
+</html>
